@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import Gallery
 # Create your views here.
 def gallery(request):
-    return render(request, 'gallery/gallery.html')
+    galleryImages = Gallery.objects
+    return render(request, 'gallery/galleryHome.html', {'gallery':galleryImages})
