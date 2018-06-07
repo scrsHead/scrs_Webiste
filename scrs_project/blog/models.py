@@ -9,3 +9,6 @@ class Blog(models.Model):
 
     def quickSummary(self):
         return self.summary[:100]
+
+    def __str__(self):
+        return self.title
